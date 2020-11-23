@@ -1,0 +1,17 @@
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    padding: 0 1rem;
+    border-bottom: 1px solid #181818;
+
+    &-title {
+        padding: 2rem 0;
+        font-weight: 500;
+    }
+
+    &-icon {
+        height: 1.5rem;
+    }
+}

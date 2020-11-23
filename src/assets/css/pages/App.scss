@@ -1,0 +1,20 @@
+.index {
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: auto [content] minmax(288px, 640px) auto;
+    column-gap: 3rem;
+
+    & > div {
+        grid-column: content;
+    }
+
+    &-stage{
+
+    }
+
+    &-headline {
+        font-size: 42px;
+        line-height: 48px;
+        text-align: center;
+    }
+}
