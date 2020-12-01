@@ -7,6 +7,7 @@ import dateFormat from 'dateformat';
 // Case Data Merger
 var co19 = [];
 for (let i = 0; i < co19A.length; i++) {
+    // Format date
     co19A[i].Date = dateFormat(co19A[i].Date, 'yyyy-mm-dd');
     var jsonObject = {
         Date: co19A[i].Date,
