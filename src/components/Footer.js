@@ -1,7 +1,7 @@
 import '../assets/css/components/Footer.scss';
 
 
-const Footer = (x) => {
+const Footer = () => {
     return (
     <div className="footer">
         <span className="footer-date">2020</span>

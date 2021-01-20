@@ -3,8 +3,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    transition: all 375ms ease;
     vertical-align: baseline;
+
+    &:not([class^="recharts"]) {
+      transition: all 375ms ease;
+    }
 }
 
 html {
@@ -15,10 +18,10 @@ html {
 
 body {
     font-size: 0.875rem;
-    line-height: 1.25rem;
-    font-family: 'Basier Square';
+    line-height: 1.5rem;
+    font-family: 'Inter';
     background-color: #000000;
-    color: #ffffff;
+    color: #f0f0f0;
 }
 
 h1,
@@ -31,8 +34,8 @@ h6 {
 }
 
 h1 {
-    font-size: 84px;
-    line-height: 90px;
+    font-size: 42px;
+    line-height: 48px;
 }
 
 h2 {
@@ -41,31 +44,53 @@ h2 {
 }
 
 h3 {
-    font-size: 54px;
-    line-height: 60px;
-}
-
-h4 {
-    font-size: 42px;
-    line-height: 48px;
-}
-
-h5 {
-    font-size: 32px;
-    line-height: 38px;
-}
-
-h6 {
     font-size: 24px;
     line-height: 30px;
 }
 
 p {
     font-size: 18px;
-    line-height: 24px;
-    color: #707070;
+    line-height: 30px;
+    font-weight: 300;
+    color: #909090;
 }
 
-span  {
-    display: inline-block;
+a {
+    color: #08bdba;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+ul,
+ol {
+    list-style-position: inside;
+}
+
+.index {
+    display: grid;
+    grid-template-columns: auto [content] minmax(272px, 720px) auto;
+    gap: 4.5rem 1.5rem;
+    padding: 4.5rem 0;
+
+    & > div {
+        grid-column: content;
+    }
+}
+
+.sources {
+    &-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &-disclaimer {
+        color: white;
+    }
+
+    &-list {
+      list-style: none;
+    }
 }
