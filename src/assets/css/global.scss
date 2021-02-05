@@ -1,0 +1,88 @@
+:root {
+    --colorBaseBlack: #000000;
+    --colorBaseGray100: #181818;
+    --colorBaseGray090: #282828;
+    --colorBaseGray080: #383838;
+    --colorBaseGray070: #505050;
+    --colorBaseGray060: #707070;
+    --colorBaseGray050: #909090;
+    --colorBaseGray040: #a8a8a8;
+    --colorBaseGray030: #c8c8c8;
+    --colorBaseGray020: #e0e0e0;
+    --colorBaseGray010: #f0f0f0;
+    --colorBaseWhite: #ffffff;
+    --colorAccentPrimary: #08bdba;
+}
+
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--colorBaseBlack);
+    color: var(--colorBaseGray010);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 42px;
+    line-height: 48px;
+}
+
+h2 {
+    font-size: 68px;
+    line-height: 74px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    color: var(--colorBaseGray060);
+    hyphens: auto;
+}
+
+span,
+a {
+    display: inline-block;
+}
+
+a {
+    color: var(--colorAccentPrimary);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--colorAccentPrimary);
+    }
+}
+
+ul,
+ol {
+    list-style-position: inside;
+}

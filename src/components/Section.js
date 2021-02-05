@@ -1,12 +1,21 @@
-import React from 'react';
-import '../assets/css/components/Section.scss';
-
-const Section = (property) => {
+import { createUseStyles } from 'react-jss'
+/* Styles */
+const styles = createUseStyles({
+  section: {
+    paddingTop: 72,
+    display: 'grid',
+    gridRowGap: 24,
+    marginBottom: -24,
+  }
+})
+/* Structure */
+const Section = (props) => {
+  var str = props.title;
   // Section Component
   return (
-    <div className='section' id={property.anchor ? property.anchor : property.title}>
-      <h3 className="section-title">{property.title}</h3>
-      {property.children}
+    <div className={styles().section} id={props.title.replace(/\s+/g, '-').toLowerCase()}>
+      <h3>{props.title}</h3>
+      {props.children}
     </div>
   );
 };
