@@ -1,12 +1,12 @@
 import { createUseStyles } from 'react-jss'
 import { ResponsiveContainer, BarChart, Bar, ReferenceLine } from 'recharts';
+
 /* Styles */
 const useStyles = createUseStyles({
   gallery: {
     display: 'grid',
     gridTemplateColumns: '1fr',
     gridGap: '16px 8px',
-
     '@media (min-width: 480px)': {
       gridTemplateColumns: '1fr 1fr 1fr',
     }
@@ -21,7 +21,7 @@ const useStyles = createUseStyles({
   },
   galleryTitle: {
     color: 'var(--colorBaseWhite)',
-    minHeight: 48,
+    minHeight: 90,
     fontWeight: 500
   },
   galleryChange: {
@@ -34,6 +34,7 @@ const useStyles = createUseStyles({
     fontWeight: 400
   },
 })
+
 /* Scripts */
 const data = [
   [{
@@ -69,7 +70,7 @@ const data = [
     companies: 15
   }],
   [{
-    name: 'Land- und forstwirtschaftliche Unterstützungsaktivitäten',
+    name: 'Land- und forstwirtschaftliche Aktivitäten',
     previousYear: 1,
     currentYear: 1.738,
     change: 0.738,
@@ -85,6 +86,7 @@ const data = [
     companies: 10
   }],
 ];
+
 /* Structure */
 const ChartGallery = (props) => {
   const styles = useStyles();
@@ -93,7 +95,7 @@ const ChartGallery = (props) => {
       {
         data.map((item, key) => (
           <div key={key} className={styles.galleryItem}>
-            <span className={styles.galleryTitle}>{item[0].name}</span>
+            <p className={styles.galleryTitle}>{item[0].name}</p>
             <ResponsiveContainer width="99%" height={120}>
               <BarChart data={item} margin={{ top: 0, right: 0, bottom: 0, left: 0 }} barGap={12}>
                 <Bar dataKey="previousYear" name="2019" fill={item[0].isPositive ? '#6fdc8c' : '#ffb3b8'} />

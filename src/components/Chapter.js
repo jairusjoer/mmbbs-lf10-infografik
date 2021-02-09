@@ -1,4 +1,5 @@
 import { createUseStyles } from 'react-jss'
+
 /* Styles */
 const useStyles = createUseStyles({
   chapter: {
@@ -20,6 +21,7 @@ const useStyles = createUseStyles({
     borderBottom: '1px solid var(--colorBaseGray090)'
   }
 })
+
 /* Structure */
 const Chapter = (props) => {
   const styles = useStyles();

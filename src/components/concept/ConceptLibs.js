@@ -1,12 +1,5 @@
-import { createUseStyles } from 'react-jss'
-/* Styles */
-const useStyles = createUseStyles({
-  ConceptLibs: {
-  },
-  ConceptLibsItem: {
-  }
-})
 /* Scripts */
+// Library data formatted for mapping
 const libraries = [
   {
     name: "node-sass",
@@ -52,11 +45,10 @@ const libraries = [
 
 /* Structure */
 const ConceptLibs = () => {
-  const styles = useStyles();
   return (
-    <ul className={styles.ConceptLibs}>
+    <ul>
       {libraries.map((item, key) =>
-        <li key={key} className={styles.ConceptLibsItem}>
+        <li key={key}>
           <a target="_blank" rel="noreferrer" href={'https://www.npmjs.com/package/' + item.name}>{item.name}</a>: {item.version}
         </li>
       )}

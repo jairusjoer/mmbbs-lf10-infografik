@@ -2,10 +2,11 @@ import { createUseStyles } from 'react-jss'
 import { useState, useEffect } from 'react';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Legend, Tooltip, ReferenceLine } from 'recharts';
 import Loading from './Loading'
+
 /* Styles */
 const useStyles = createUseStyles({
   tooltip: {
-    backgroundColor: 'var(--colorBaseGray090)',
+    backgroundColor: 'var(--colorBaseGray100)',
     color: 'var(--colorBaseWhite)',
     padding: 8,
     borderRadius: 8,
@@ -42,7 +43,7 @@ const useStyles = createUseStyles({
   chartSource: {
     display: 'block',
     textAlign: 'center',
-    margin: '16px auto 0',
+    margin: '16px auto 16px',
   },
   chartLoading: {
     padding: 24,
@@ -51,7 +52,6 @@ const useStyles = createUseStyles({
     borderRadius: 12,
   },
 })
-/* Scripts */
 
 /* Structure */
 const ChartComparsion = (props) => {
@@ -77,6 +77,7 @@ const ChartComparsion = (props) => {
     }
     setData(output)
   }
+  
   // Parse API data to data constant
   useEffect(() => {
     // Fetch data from API and move data to customMerge()
@@ -118,7 +119,7 @@ const ChartComparsion = (props) => {
       <div>
         <div className={styles.chart}>
           <ResponsiveContainer width="99%" height={360}>
-            <LineChart data={data} margin={{ top: 0, right: 0, bottom: 0, left: 0 }}>
+            <LineChart data={data} margin={{ top: 0, right: 0, bottom: 0, left: -24 }}>
               <XAxis minTickGap={32} dataKey='date' stroke="var(--colorBaseGray070)" />
               <YAxis yAxisId='left' stroke="var(--colorBaseGray070)" />
               <Tooltip content={<TooltipContent />} />
@@ -132,7 +133,7 @@ const ChartComparsion = (props) => {
             </LineChart>
           </ResponsiveContainer>
         </div>
-        <span className={styles.chartSource}>Source: <a className="chart-link" href={props.sourceUrl} target="_blank" rel="noreferrer">{props.sourceName}</a></span>
+        <span className={styles.chartSource}>Quelle: <a className="chart-link" href={props.sourceUrl} target="_blank" rel="noreferrer">{props.sourceName}</a></span>
       </div>
     );
   }

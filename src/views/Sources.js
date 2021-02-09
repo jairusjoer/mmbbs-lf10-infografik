@@ -1,6 +1,7 @@
 import { createUseStyles } from 'react-jss';
 import Chapter from "../components/Chapter";
 import Section from "../components/Section";
+
 /* Styles */
 const useStyles = createUseStyles({
   Sources: {
@@ -10,7 +11,9 @@ const useStyles = createUseStyles({
     padding: '48px 0'
   },
 })
+
 /* Scripts */
+// Source data formatted for mapping
 const sources = [
   {
     type: 'Artikel',
@@ -63,6 +66,7 @@ const sources = [
     ]
   }
 ];
+
 /* Structure */
 function Sources() {
   const styles = useStyles();

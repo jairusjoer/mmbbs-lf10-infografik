@@ -2,10 +2,11 @@ import { createUseStyles } from 'react-jss'
 import { useState, useEffect } from 'react';
 import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip, ReferenceLine } from 'recharts';
 import Loading from './Loading';
+
 /* Styles */
 const useStyles = createUseStyles({
   tooltip: {
-    backgroundColor: 'var(--colorBaseGray090)',
+    backgroundColor: 'var(--colorBaseGray100)',
     color: 'var(--colorBaseWhite)',
     padding: 8,
     borderRadius: 8,
@@ -36,7 +37,7 @@ const useStyles = createUseStyles({
   chartSource: {
     display: 'block',
     textAlign: 'center',
-    margin: '16px auto 0',
+    margin: '16px auto 16px',
   },
   chartLoading: {
     padding: 24,
@@ -45,7 +46,6 @@ const useStyles = createUseStyles({
     borderRadius: 12,
   },
 })
-/* Scripts */
 
 /* Structure */
 const ChartMSCI = (props) => {
@@ -63,7 +63,7 @@ const ChartMSCI = (props) => {
     }
     setData(output)
   }
-  // Parse API data to data constant
+  // Pass API data to data constant as state
   useEffect(() => {
     // Fetch data from API and move data to customMerge()
     const fetchData = async (api) => {
@@ -111,7 +111,7 @@ const ChartMSCI = (props) => {
                   <stop offset="95%" stopColor="var(--colorAccentPrimary)" stopOpacity={0} />
                 </linearGradient>
               </defs>
-              <XAxis  minTickGap={32} dataKey='date' stroke="var(--colorBaseGray070)" />
+              <XAxis minTickGap={32} dataKey='date' stroke="var(--colorBaseGray070)" />
               <YAxis yAxisId='left' stroke="var(--colorBaseGray070)" />
               <Tooltip content={<TooltipContent />} />
               <ReferenceLine yAxisId="left" x="Feb 20, 20" stroke="var(--colorBaseWhite)" strokeDasharray="4 4" />
@@ -125,7 +125,7 @@ const ChartMSCI = (props) => {
     );
   }
   return (
-    <Loading/>
+    <Loading />
   );
 };
 

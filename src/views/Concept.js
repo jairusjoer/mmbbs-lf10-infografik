@@ -64,7 +64,6 @@ function Concept() {
           Die dafür zuständige Bibliothek – <a target="_blank" rel="noreferrer" href="https://recharts.org/en-US/">Recharts</a> – übernimmt das dynamische Rendern und Animieren von Dateneinträgen und Tooltips.</p>
             <p>Auch wenn die Bibliothek diverse Einstellungspunkte zur Konfiguration der Animationen anbietet, habe ich mich dafür entschieden, die von Werk aus eingestellten kurzen und bündigen Animationssets zu übernehmen.
             Dies reduziert die benötigte Zeit zur Darstellung der Inhalte und erleichtert die Wahrnehmung der darzustellenden Inhalte.</p>
-            <p>Durch die große Menge an gesendeten Börsendaten und deren Umformatierung kann es </p>
           </Section>
           <Section title="Skripte, Bibliotheken, API">
             <h4>Skripte</h4>
@@ -72,7 +71,7 @@ function Concept() {
             <h4>Bibliotheken</h4>
             <ConceptLibs />
             <h4>API</h4>
-            <p>Alle Kursdaten werden von der <a target="_blank" rel="noreferrer" href="https://iexcloud.io/">IEX Cloud</a> über <code>fetch()</code> geliefert und stellen tagesaktuelle Schlusskurse (Close) dar.</p>
+            <p>Alle Kursdaten werden von der <a target="_blank" rel="noreferrer" href="https://iexcloud.io/">IEX Cloud</a> über die Funktion <code>fetch()</code> gerufen und stellen tagesaktuelle Schlusskurse (Close) dar.</p>
           </Section>
         </Chapter>
       </main>

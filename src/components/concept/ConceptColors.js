@@ -1,4 +1,5 @@
 import { createUseStyles } from 'react-jss'
+
 /* Styles */
 const useStyles = createUseStyles({
   ConceptColors: {
@@ -20,7 +21,7 @@ const useStyles = createUseStyles({
     padding: '8px 16px',
     width: '100%',
     borderRadius: 8,
-    border: '1px solid var(--colorBaseGray090)',
+    border: '1px solid var(--colorBaseGray080)',
   },
   ConceptColorsName: {
     fontWeight: 500,
@@ -29,47 +30,49 @@ const useStyles = createUseStyles({
     opacity: .666
   }
 })
+
 /* Scripts */
+// Color data formatted for mapping
 const colors = [
   {
     name: 'colorBaseBlack',
     code: '#000000',
-    font: '#ffffff'
+    font: '#FFFFFF'
   },
   {
     name: 'colorBaseGray100',
     code: '#181818',
-    font: '#ffffff'
+    font: '#FFFFFF'
   },
   {
     name: 'colorBaseGray090',
     code: '#282828',
-    font: '#ffffff'
+    font: '#FFFFFF'
   },
   {
     name: 'colorBaseGray080',
     code: '#383838',
-    font: '#ffffff'
+    font: '#FFFFFF'
   },
   {
     name: 'colorBaseGray070',
     code: '#505050',
-    font: '#ffffff'
+    font: '#FFFFFF'
   },
   {
     name: 'colorBaseGray050',
     code: '#909090',
-    font: '#ffffff'
+    font: '#000000'
   },
   {
     name: 'colorBaseWhite',
-    code: '#ffffff',
+    code: '#FFFFFF',
     font: '#000000'
   },
   {
     name: 'colorAccentPrimary',
     code: '#408FFF',
-    font: '#ffffff'
+    font: '#000000'
   }
 ]
 

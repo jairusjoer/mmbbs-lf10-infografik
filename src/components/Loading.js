@@ -1,4 +1,5 @@
 import { createUseStyles } from 'react-jss'
+
 /* Styles */
 const useStyles = createUseStyles({
   loading: {
@@ -16,10 +17,10 @@ const useStyles = createUseStyles({
     }
   }
 })
+
 /* Structure */
 function Loading() {
   const styles = useStyles();
-
   return (
     <div className={styles.loading}></div>
 

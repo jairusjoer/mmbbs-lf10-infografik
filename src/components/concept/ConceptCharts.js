@@ -1,11 +1,15 @@
 import { createUseStyles } from 'react-jss'
 import { ResponsiveContainer, LineChart, Line, AreaChart, Area, BarChart, Bar } from 'recharts';
+
 /* Styles */
 const useStyles = createUseStyles({
   ConceptCharts: {
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr 1fr',
+    gridTemplateColumns: '1fr',
     gridColumnGap: 16,
+    '@media (min-width: 480px)': {
+      gridTemplateColumns: '1fr 1fr 1fr',
+    }
   },
   ConceptChartsItem: {
     padding: 16,
@@ -13,7 +17,9 @@ const useStyles = createUseStyles({
     borderRadius: 8,
   }
 })
+
 /* Scripts */
+// Sample data formatted for Recharts component
 const data = [
   {
     value: 4000,
@@ -37,6 +43,7 @@ const data = [
     value: 3490,
   },
 ];
+
 /* Structure */
 const ConceptCharts = (props) => {
   const styles = useStyles();
