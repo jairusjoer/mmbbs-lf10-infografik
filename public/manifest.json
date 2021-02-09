@@ -1,1 +1,9 @@
-{}
+{
+    "name": "Visualisierung der Auswirkungen von COVID-19 auf den Aktienmarkt",
+    "short_name": "LS12-Infografik",
+    "description": "Ein Überblick über die Auswirkungen und Implikationen von Covid-19 auf die internationale Wirtschaft.",
+    "start_url": ".",
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "categories": ["finance", "business", "utilities"]
+}
