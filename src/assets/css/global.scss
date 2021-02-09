@@ -1,17 +1,18 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+body {
     --colorBaseBlack: #000000;
     --colorBaseGray100: #181818;
     --colorBaseGray090: #282828;
     --colorBaseGray080: #383838;
     --colorBaseGray070: #505050;
-    --colorBaseGray060: #707070;
+    //--colorBaseGray060: #707070;
     --colorBaseGray050: #909090;
-    --colorBaseGray040: #a8a8a8;
-    --colorBaseGray030: #c8c8c8;
-    --colorBaseGray020: #e0e0e0;
-    --colorBaseGray010: #f0f0f0;
+    //--colorBaseGray040: #a8a8a8;
+    //--colorBaseGray030: #c8c8c8;
+    //--colorBaseGray020: #e0e0e0;
+    //--colorBaseGray010: #f0f0f0;
     --colorBaseWhite: #ffffff;
-    --colorAccentPrimary: #08bdba;
+    --colorAccentPrimary: #408fff;
 }
 
 * {
@@ -20,6 +21,10 @@
     margin: 0;
     padding: 0;
     vertical-align: baseline;
+
+    &:not([class^='recharts']) {
+        transition: all 200ms ease-in-out;
+    }
 }
 
 html {
@@ -30,10 +35,14 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--colorBaseBlack);
-    color: var(--colorBaseGray010);
+    color: var(--colorBaseGray050);
     font-size: 14px;
     line-height: 24px;
     font-weight: 400;
+
+    @media (max-width: 480px) {
+        hyphens: auto;
+    }
 }
 
 h1,
@@ -43,6 +52,7 @@ h4,
 h5,
 h6 {
     font-weight: 500;
+    color: var(--colorBaseWhite);
 }
 
 h1 {
@@ -60,17 +70,21 @@ h3 {
     line-height: 30px;
 }
 
+h4 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
 p {
     font-size: 18px;
     line-height: 30px;
-    font-weight: 400;
-    color: var(--colorBaseGray060);
-    hyphens: auto;
+    font-weight: 300;
 }
 
-span,
-a {
+span {
     display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
 }
 
 a {
@@ -84,5 +98,19 @@ a {
 
 ul,
 ol {
-    list-style-position: inside;
+    list-style-position: outside;
+    padding-left: 16px;
+    color: var(--colorBaseWhite);
+}
+
+code {
+    position: relative;
+    top: -2px;
+    color: var(--colorBaseWhite);
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 2px 4px;
+    border-radius: 4px;
+    background-color: var(--colorBaseGray090);
 }

@@ -2,7 +2,7 @@ import { createUseStyles } from 'react-jss'
 import splash from '../assets/img/splash.jpg'
 /* Styles */
 const useStyles = createUseStyles({
-  masthead: {
+  mast: {
     minHeight: '100vh',
     display: 'grid',
     gridRowGap: '1.5rem',
@@ -10,13 +10,17 @@ const useStyles = createUseStyles({
     justifyItems: 'center',
     padding: '48px 24px',
     textAlign: 'center',
-    background: 'linear-gradient(#00000000, #000000), url(' + splash + ') no-repeat',
+    background: 'linear-gradient(transparent, var(--colorBaseBlack)), url(' + splash + ') no-repeat',
     backgroundSize: 'cover'
   },
-  caption: {
+  mastTitle: {
+    maxWidth: 688,
+  },
+  mastCaption: {
+    color: 'var(--colorBaseWhite)',
     maxWidth: 480,
   },
-  button: {
+  mastButton: {
     border: '1px solid var(--colorBaseWhite)',
     height: 48,
     width: 48,
@@ -24,7 +28,7 @@ const useStyles = createUseStyles({
     borderRadius: 8
   },
 
-  svg: {
+  mastIcon: {
     height: 24,
     width: 24
   }
@@ -34,11 +38,11 @@ const Masthead = () => {
   const styles = useStyles();
 
   return (
-    <div className={styles.masthead} id="masthead">
-      <h1>Visualizing the economic impact of COVID-19</h1>
-      <span className={styles.caption}>An overview of the impact and implications of Covid-19 on the international economy.</span>
-      <a className={styles.button} href="#report">
-        <svg className={styles.svg} focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 22L6 12 7.4 10.6 16 19.2 24.6 10.6 26 12z"></path><title>Chevron down</title></svg>
+    <div className={styles.mast} id="masthead">
+      <h1 className={styles.mastTitle}>Visualisierung der Auswirkungen von COVID-19 auf den Aktienmarkt</h1>
+      <span className={styles.mastCaption}>Ein Überblick über die Auswirkungen und Implikationen von Covid-19 auf die internationale Wirtschaft.</span>
+      <a className={styles.mastButton} href="#report">
+        <svg className={styles.mastIcon} focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="var(--colorBaseWhite)" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 22L6 12 7.4 10.6 16 19.2 24.6 10.6 26 12z"></path><title>Chevron down</title></svg>
       </a>
     </div>
   );

@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss'
 import { useState, useEffect } from 'react';
-import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Legend, Tooltip, ReferenceLine } from 'recharts';
+import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip, ReferenceLine } from 'recharts';
 /* Styles */
 const useStyles = createUseStyles({
   tooltip: {
@@ -31,12 +31,6 @@ const useStyles = createUseStyles({
     padding: 16,
     background: 'linear-gradient(180deg, transparent 0%, var(--colorBaseGray100) 100%)',
     borderRadius: 8,
-    flexGrow: 1,
-    overflowY: 'hidden'
-  },
-  chartContainer: {
-    display: 'flex',
-    flexDirection: 'column'
   },
   chartSource: {
     display: 'block',
@@ -53,24 +47,16 @@ const useStyles = createUseStyles({
 /* Scripts */
 
 /* Structure */
-const ChartComparsion = (props) => {
+const ChartMSCI = (props) => {
   const styles = useStyles();
   const [data, setData] = useState([]);
-
   // Custom data merge function
   const customMerge = (input) => {
     var output = [];
-    for (const i in input.FB.chart) {
-      const regex = /\d{2}[,]/gm;
-      var dayDate = input.FB.chart[i].label
+    for (const i in input) {
       var json = {
-        date: input.FB.chart[i].label,
-        month: dayDate.replace(regex, ''),
-        fb: input.FB.chart[i].changeOverTime * 100,
-        amzn: input.AMZN.chart[i].changeOverTime * 100,
-        aapl: input.AAPL.chart[i].changeOverTime * 100,
-        nflx: input.NFLX.chart[i].changeOverTime * 100,
-        goog: input.GOOG.chart[i].changeOverTime * 100,
+        date: input[i].label,
+        urth: input[i].close,
       };
       output.push(json);
     }
@@ -88,11 +74,11 @@ const ChartComparsion = (props) => {
 
     }
     // Execute function to update data state
-    fetchData('https://sandbox.iexapis.com/stable/stock/market/batch?symbols=fb,amzn,aapl,nflx,goog&types=chart&range=2y&token=Tsk_bfcba392ab76443fb243298b50f4ff44');
+    fetchData('https://sandbox.iexapis.com/stable/stock/urth/chart/2y?token=Tsk_bfcba392ab76443fb243298b50f4ff44');
   }, []);
 
   // Custom Tooltip Component
-  const TooltipContent = ({ active, payload, label }) => {
+  const TooltipContent = ({ payload }) => {
     if (payload && payload[0]) {
       return (
         <div className={styles.tooltip}>
@@ -102,7 +88,7 @@ const ChartComparsion = (props) => {
               <span style={{ color: item.stroke }}>
                 {item.name}
               </span>
-              <span className={styles.tooltipValue}>{item.value.toFixed(2)}%</span>
+              <span className={styles.tooltipValue}>{item.value.toFixed(2)}</span>
             </div>
           )}
         </div>
@@ -116,19 +102,21 @@ const ChartComparsion = (props) => {
     return (
       <div>
         <div className={styles.chart}>
-          <ResponsiveContainer width="99%" height={360}>
-            <LineChart data={data} margin={{ top: 0, right: 0, bottom: 0, left: -20 }}>
-              <XAxis minTickGap={32} dataKey='date' stroke="var(--colorBaseGray070)" />
+          <ResponsiveContainer id width="99%" height={360}>
+            <AreaChart data={data} margin={{ top: 0, right: 0, bottom: 0, left: -24 }}>
+              <defs>
+                <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="var(--colorAccentPrimary)" stopOpacity={0.5} />
+                  <stop offset="95%" stopColor="var(--colorAccentPrimary)" stopOpacity={0} />
+                </linearGradient>
+              </defs>
+              <XAxis  minTickGap={32} dataKey='date' stroke="var(--colorBaseGray070)" />
               <YAxis yAxisId='left' stroke="var(--colorBaseGray070)" />
               <Tooltip content={<TooltipContent />} />
-              <Legend />
               <ReferenceLine yAxisId="left" x="Feb 20, 20" stroke="var(--colorBaseWhite)" strokeDasharray="4 4" />
-              <Line dataKey='goog' name="Alphabet" yAxisId='left' type='monotone' dot={false} stroke='#4caf50' />
-              <Line dataKey='amzn' name="Amazon.com" yAxisId='left' type='monotone' dot={false} stroke='#ffc107' />
-              <Line dataKey='aapl' name="Apple" yAxisId='left' type='monotone' dot={false} stroke='#9474cc' />
-              <Line dataKey='fb' name="Facebook" yAxisId='left' type='monotone' dot={false} stroke='#2196f3' />
-              <Line dataKey='nflx' name="Netflix" yAxisId='left' type='monotone' dot={false} stroke='#f44336' />
-            </LineChart>
+              <ReferenceLine yAxisId="left" y="105" stroke="var(--colorBaseWhite)" strokeDasharray="4 4" />
+              <Area dataKey='urth' name="iShares MSCI World" yAxisId='left' type='monotone' dot={false} stroke='var(--colorAccentPrimary)' fillOpacity={1} fill="url(#gradient)" />
+            </AreaChart>
           </ResponsiveContainer>
         </div>
         <span className={styles.chartSource}>Source: <a className="chart-link" href={props.sourceUrl} target="_blank" rel="noreferrer">{props.sourceName}</a></span>
@@ -140,4 +128,4 @@ const ChartComparsion = (props) => {
   );
 };
 
-export default ChartComparsion;
+export default ChartMSCI;
