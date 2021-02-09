@@ -5,6 +5,7 @@ import Section from "../components/Section";
 import ChartComparsion from "../components/ChartComparsion";
 import ChartGallery from "../components/ChartGallery";
 import ChartMSCI from '../components/ChartMSCI';
+
 /* Styles */
 const useStyles = createUseStyles({
   reportContent: {
@@ -14,6 +15,7 @@ const useStyles = createUseStyles({
     padding: '64px 0'
   },
 })
+
 /* Structure */
 function Report() {
   const styles = useStyles();

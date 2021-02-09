@@ -63,6 +63,7 @@ const ChartMSCI = (props) => {
     }
     setData(output)
   }
+
   // Pass API data to data constant as state
   useEffect(() => {
     // Fetch data from API and move data to customMerge()

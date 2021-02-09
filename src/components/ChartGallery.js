@@ -36,6 +36,7 @@ const useStyles = createUseStyles({
 })
 
 /* Scripts */
+// Financial data formatted for mapping
 const data = [
   [{
     name: 'Fischen, Jagen, Fallenstellen',

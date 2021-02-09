@@ -77,8 +77,8 @@ const ChartComparsion = (props) => {
     }
     setData(output)
   }
-  
-  // Parse API data to data constant
+
+   // Pass API data to data constant as state
   useEffect(() => {
     // Fetch data from API and move data to customMerge()
     const fetchData = async (api) => {

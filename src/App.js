@@ -15,6 +15,7 @@ const useStyles = createUseStyles({
 })
 
 /* Scripts */
+// Lazy imports for improved render time
 const Report = lazy(() => import('./views/Report'));
 const Concept = lazy(() => import('./views/Concept'));
 const Sources = lazy(() => import('./views/Sources'));
