@@ -1,0 +1,17 @@
+AuthUserFile /mnt/rid/06/01/510580601/htdocs/sites/jairusjoer.com/ls12/.htpasswd
+AuthType Basic
+AuthName "Projekt: Infografik Onepager"
+Require valid-user
+
+
+<IfModule mod_rewrite.c>
+
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /index.html [L]
+
+</IfModule>

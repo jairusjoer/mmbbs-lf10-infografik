@@ -19,28 +19,36 @@ const sources = [
     type: 'Artikel',
     data: [
       {
+        title: 'COVID-19: Implications for business',
+        url: 'https://www.mckinsey.com/business-functions/risk/our-insights/covid-19-implications-for-business'
+      },
+      {
         title: 'Lehman Brothers: The rise and fall of the US investment bank',
         url: 'https://corporatefinanceinstitute.com/resources/knowledge/finance/lehman-brothers/',
+      },
+      {
+        title: 'Let there be darkness! 🌚 Maybe…',
+        url: 'https://medium.com/dev-channel/let-there-be-darkness-maybe-9facd9c3023d',
       },
       {
         title: 'MSCI World Index',
         url: 'https://www.msci.com/documents/10199/149ed7bc-316e-4b4c-8ea4-43fcb5bd6523',
       },
       {
-        title: 'Let there be darkness! 🌚 Maybe…',
-        url: 'https://medium.com/dev-channel/let-there-be-darkness-maybe-9facd9c3023d',
+        title: 'Reddit’s Profane, Greedy Traders Are Shaking Up the Stock Market',
+        url: 'https://www.bloomberg.com/news/articles/2020-02-26/reddit-s-profane-greedy-traders-are-shaking-up-the-stock-market',
       },]
   },
   {
     type: 'Daten',
     data: [
       {
-        title: 'IEX Cloud',
-        url: 'https://iexcloud.io/',
-      },
-      {
         title: 'Harvard Business School',
         url: 'https://www.hbs.edu/covid-19-business-impact/Insights/Economic-and-Financial-Impacts/Impact-Maps',
+      },
+      {
+        title: 'IEX Cloud',
+        url: 'https://iexcloud.io/',
       },
     ]
   },
@@ -56,12 +64,24 @@ const sources = [
         url: 'https://www.ibm.com/design/language/color/#specifications',
       },
       {
-        title: 'The Inter typeface family',
-        url: 'https://rsms.me/inter/',
+        title: 'Nivo',
+        url: 'https://nivo.rocks/',
+      },
+      {
+        title: 'ReactJS',
+        url: 'https://reactjs.org/',
       },
       {
         title: 'Recharts',
         url: 'https://recharts.org/en-US/',
+      },
+      {
+        title: 'The Inter typeface family',
+        url: 'https://rsms.me/inter/',
+      },
+      {
+        title: 'visx',
+        url: 'https://airbnb.io/visx/',
       },
     ]
   }
