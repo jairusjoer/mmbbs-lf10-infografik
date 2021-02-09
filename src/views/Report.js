@@ -31,15 +31,19 @@ function Report() {
             <p>
               In den folgenden Punkten wird beschrieben, wann und wie sich COVID-19 auf die Weltwirtschaft ausgewirkt hat und weiterhin auswirkt.
           </p>
+            <p>
+              Vorab sei noch anzumerken, dass dieser Report nur die Oberfläche einer komplexen Thematik inspiziert und diese nicht in ihrer Gänze erfassen und darstellen kann.
+          </p>
           </Section>
           <Section title='Prozentuale Zweijahresperformance der 5 größten Technologie&shy;unternehmen'>
             <p>
-              Die fünf größten (westlichen) Technologieunternehmen der Welt ('Big Tech'; 'FAANG') waren von den Marktschwankungen der folgenden Rezession nicht ausgeschlossen, welche am 20.&nbsp;Februar 2020 (Referenzlinie) auf die Schutz- und Isolationsmaßnahmen inter- und nationaler Gesundheitsbehörden folgte.
+              Die fünf größten (westlichen) Technologieunternehmen der Welt ('Big Tech'; 'FAANG') waren von den Marktschwankungen der folgenden Rezession nicht ausgeschlossen, welche am 20.&nbsp;Februar 2020 (Referenzlinie) auf die Schutz- und Isolationsmaßnahmen inter-/nationaler Gesundheitsbehörden folgte.
             </p>
             <ChartComparsion sourceName='Data provided by IEX Cloud' sourceUrl='https://iexcloud.io' />
             <p>
               War der Ausbruch von COVID-19 der WHO bereits am 31.&nbsp;Dezember&nbsp;2019 bekannt, so kam es erst mit der globalen Rezession im Februar&nbsp;2021 zu starken Kursabweichungen innerhalb der präsentierten Gruppe.
             </p>
+            <p>Angemerkt sei, dass die dargstellte Gruppe eine besonders ausgeprägte Präsenz in den Medien und der Finanzwelt besitzt und (normalerweise) eine Ausnahme darstellt. Kursschwankungen sind abhängig von Wertpapier zu Wertpapier und können je nach Sektor und Unternehmen unterschiedlich ausfallen. die COVID-19-Rezession ist insofern besonders, dass nahezu alle Wertpapier in einem ähnlichen Ausmaß betroffen waren und es zu massenhaften Verkäufen von Wertpapieren kam.</p>
             <p>
               Bemerkenswert ist dabei, dass die Unternehmen bereits nach circa drei Monaten nach Inkrafttreten der Einschränkungen wieder auf ursprüngliche Börsenwerte zurückkehrten und diese im Jahresverlauf 2020 sogar stark ausbauen konnten.
             </p>
@@ -64,6 +68,16 @@ function Report() {
             <p>
               Vor allem Technologieunternehmen – welche 22.18&nbsp;% des MSCI World ausmachen – wie die der Big Tech profitierten von den Schutz- und Isolationsmaßnahmen der Gesundheitsbehörden. Die dadurch erzwungene Digitalisierung von Arbeitsplätzen führte zu einem Allzeithoch im Konsum von Produkten und Services von Technologieunternehmen.
             </p>
+            <p>Hier wird deutlich, dass Indexes zwar Indikatoren für eine wachsende Wirtschaft sein können, diese aber oft auch die Wahrnehmung verzerren können. Der hohe Anteil an Technologieunternehmen in einem Weltmarkt abdeckenden Index rührt daher, dass dieser Sektor in den letzten zehn Jahren durch vielversprechende Entwicklungen und Start-ups eine nie dagewesene Performance hinlegen konnte. In diesem Kontext spricht man vom Datenzeitalter:</p>
+          </Section>
+          <Section title="Daten sind das neue Öl">
+            <p>Was Clive Humby im Jahre 2006 so passend formulierte, wurde im Jahre 2020 Realität. Isolation und der Drang von zuhause und überhaupt überall arbeiten und vernetzt sein zu können haben eine neue Welle der Digialisierung losgetreten.</p>
+            <blockquote>Data is the new oil<span>Clive Humby, 2006</span></blockquote>
+            <p>Die Profiteure in dieser Welle sind die Hersteller von Hard- und Software, welche diese Entwicklung antreibt. Länder mit ausbaufähiger digitaler Infrastruktur waren durch das Virus gezwungen, Netze und Kommunikation auszubauen.</p>
+            <p>Firmen wie Apple, Alphabet aber auch Huawei oder Ericsson lieferten uns die Technologie und Geräte für eine Welt, in der ein Virus das moderne Leben nicht gnadenlos einschränken kann.</p>
+            <p>Den Preis dafür bezahlen die Bürger der Staaten, die Individuen, deren Leben von den Einschränkungen betroffen ist und die Arbeitnehmer, welche die Geräte unter teils gefährlichen Umständen herstellen und exportieren.</p>
+            <p>Gewinner sind Aktionäre und Anteilshaber in besagte Firmen. Wer investiert zählt zu den Gewinnern, aber auch zu denen, welche solche Entwicklungen begünstigen.</p>
+            <p>Ethische Fragen wie diese kollidieren mit der harschen Realität, dass COVID-19 weiterhin ganze Existenzen bedroht, welche vor allem in entwickelten Ländern, wie den USA, durch ihre Arbeit finanziert werden.</p>
           </Section>
           <Section title='Prozentuale Entwicklung der Rendite im Vergleich zum Geschäftsjahr 2019'>
             <p>
@@ -78,6 +92,12 @@ function Report() {
             <p>Panikkäufe und die Bequemlichkeiten des Versandhandels haben die Pandemie dominiert. Zurückführen lässt sich dies auf die Quarantänemaßnahmen und der zunehmenden Digitalisierung der allgemeinen Bevölkerung.</p>
             <h4>Land- und forstwirtschaftliche Unterstützungsaktivitäten</h4>
             <p>Einschränkungen im alltäglichen Leben haben zu einer reduzierten Nachfrage in landwirtschaftlichen Erträgen und Holz geführt. Dies gab Nonprofit-Organisationen und der Forstwirtschaft genügend Raum um Wald- und Landbestände wiederherzustellen.</p>
+            <p>Renditeentwicklungen wie diese sind unüblich, aber auch mit Vorsicht zu genießen. Die erfassten Daten betrachten nur eine Kleinstzahl an Unternehmen in ihren entsprechenden Sektoren. Dennoch skizzieren sie ein Bild, welches vor allem die Zukunft definieren wird.</p>
+          </Section>
+          <Section title='Schlusswort'>
+            <p>Wie eine Welt nach der Rezession aussehen wird, lässt sich aus diesem Report, aber auch aus den Nachrichten, skizzieren. Wir blicken in eine Welt, in der Kommunikation allgegenwärtig sein wird und Arbeit und Privatleben immer mehr verschmelzen.</p>
+            <p>Aber auch eine Welt, in der das Reisen weniger – oder zumindest vorsichtiger – wird und eine Welt, in der Konsum und Nachhaltigkeit möglich sein können.</p>
+            <p>Abhängig ist dies aber nicht nur von Akteuren und Profiteuren, sondern auch vom Individuum. <a target="_blank" rel="noreferrer" href="https://www.bloomberg.com/news/articles/2020-02-26/reddit-s-profane-greedy-traders-are-shaking-up-the-stock-market">r/wallstreetbets</a> steht als Beweis dieser kollektiven Tendenz zur Ausübung von Veränderung, aber auch Macht.</p>
           </Section>
         </Chapter>
       </main>
