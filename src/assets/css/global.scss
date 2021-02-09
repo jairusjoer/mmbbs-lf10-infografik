@@ -16,10 +16,6 @@ body {
     margin: 0;
     padding: 0;
     vertical-align: baseline;
-
-    &:not([class^='recharts'], body) {
-        transition: all 200ms ease-in-out;
-    }
 }
 
 html {
