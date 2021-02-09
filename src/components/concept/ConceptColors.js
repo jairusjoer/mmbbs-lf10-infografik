@@ -3,8 +3,16 @@ import { createUseStyles } from 'react-jss'
 const useStyles = createUseStyles({
   ConceptColors: {
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr 1fr',
-    gridGap: 8
+    gridTemplateColumns: '1fr',
+    gridGap: 8,
+
+    '@media (min-width: 480px)': {
+      gridTemplateColumns: '1fr 1fr',
+    },
+
+    '@media (min-width: 720px)': {
+      gridTemplateColumns: '1fr 1fr 1fr 1fr',
+    }
   },
   ConceptColorsItem: {
     display: 'grid',

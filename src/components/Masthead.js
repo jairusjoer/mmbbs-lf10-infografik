@@ -10,7 +10,7 @@ const useStyles = createUseStyles({
     justifyItems: 'center',
     padding: '48px 24px',
     textAlign: 'center',
-    background: 'linear-gradient(transparent, var(--colorBaseBlack)), url(' + splash + ') no-repeat',
+    background: 'linear-gradient(rgba(0, 0, 0, 0.333), var(--colorBaseBlack)), url(' + splash + ') no-repeat',
     backgroundSize: 'cover'
   },
   mastTitle: {

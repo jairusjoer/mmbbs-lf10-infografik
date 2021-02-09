@@ -1,16 +1,24 @@
+import React, { lazy, Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom'
-import Report from './views/Report'
-import Concept from './views/Concept';
-import Sources from './views/Sources';
+import Navigation from './components/Navigation';
+import Loading from './components/Loading'
+import Footer from './components/Footer';
+const Report = lazy(() => import('./views/Report'));
+const Concept = lazy(() => import('./views/Concept'));
+const Sources = lazy(() => import('./views/Sources'));
 
-function App() {
+const App = () => {
   return (
     <div className="app">
+      <Navigation />
       <Switch>
-        <Route exact path="/" component={Report} />
-        <Route path="/concept" component={Concept} />
-        <Route path="/sources" component={Sources} />
+        <Suspense fallback={Loading()}>
+          <Route exact path="/" component={Report} />
+          <Route path="/concept" component={Concept} />
+          <Route path="/sources" component={Sources} />
+        </Suspense>
       </Switch>
+      <Footer />
     </div>
   );
 }

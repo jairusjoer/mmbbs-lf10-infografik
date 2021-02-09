@@ -1,13 +1,11 @@
-import { createUseStyles } from 'react-jss'
-import Navigation from "../components/Navigation";
+import { createUseStyles } from 'react-jss';
 import Chapter from "../components/Chapter";
 import Section from "../components/Section";
-import Footer from '../components/Footer';
 /* Styles */
 const useStyles = createUseStyles({
   Sources: {
     display: 'grid',
-    gridTemplateColumns: 'auto [content] minmax(272px, 720px) auto',
+    gridTemplateColumns: 'auto [content] minmax(288px, 720px) auto',
     gridGap: '48px 16px',
     padding: '48px 0'
   },
@@ -69,27 +67,22 @@ const sources = [
 function Sources() {
   const styles = useStyles();
   return (
-    <div className="Sources">
-      <Navigation />
-      <main className={styles.Sources}>
-        <Chapter title="Quellen">
-          {
-            sources.map((section, key) =>
-              <Section title={section.type}>
-                <ul>
-                  {section.data.map((item, key) =>
-                    <li key={key} className={styles.sourceItem}><a target="_blank" rel="noreferrer" href={item.url} >{item.title}</a></li>
-                  )}
-                </ul>
-              </Section>
-            )
-          }
-        </Chapter>
-      </main>
-      <Footer/>
-    </div>
+    <main className={styles.Sources}>
+      <Chapter title="Quellen">
+        {
+          sources.map((section, key) =>
+            <Section key={key} title={section.type}>
+              <ul>
+                {section.data.map((item, key) =>
+                  <li key={key} className={styles.sourceItem}><a target="_blank" rel="noreferrer" href={item.url} >{item.title}</a></li>
+                )}
+              </ul>
+            </Section>
+          )
+        }
+      </Chapter>
+    </main>
   );
 }
 
 export default Sources;
-

@@ -7,10 +7,6 @@ const useStyles = createUseStyles({
     padding: 16,
     background: 'linear-gradient(180deg, transparent 0%, var(--colorBaseGray100) 100%)',
     borderRadius: 8,
-
-    '& > *': {
-      opacity: 0.333
-    }
   },
 })
 /* Scripts */

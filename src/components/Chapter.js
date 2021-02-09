@@ -26,7 +26,6 @@ const Chapter = (props) => {
   return (
     <div className={styles.chapter} id={props.title}>
       <h2 className={styles.chapterTitle}>{props.title}</h2>
-      {console.log(props.children)}
       {Array.isArray(props.children) &&
         <ol className={styles.chapterContents}>
           {props.children.map((item, key) => <li key={key} className={styles.chapterItem}><a className={styles.chapterLink} href={'#' + item.props.title.replace(/\s+/g, '-').toLowerCase()}>{item.props.title}</a></li>)}

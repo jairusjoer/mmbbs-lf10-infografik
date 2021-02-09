@@ -1,6 +1,7 @@
 import { createUseStyles } from 'react-jss'
 import { useState, useEffect } from 'react';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Legend, Tooltip, ReferenceLine } from 'recharts';
+import Loading from './Loading'
 /* Styles */
 const useStyles = createUseStyles({
   tooltip: {
@@ -117,7 +118,7 @@ const ChartComparsion = (props) => {
       <div>
         <div className={styles.chart}>
           <ResponsiveContainer width="99%" height={360}>
-            <LineChart data={data} margin={{ top: 0, right: 0, bottom: 0, left: -20 }}>
+            <LineChart data={data} margin={{ top: 0, right: 0, bottom: 0, left: 0 }}>
               <XAxis minTickGap={32} dataKey='date' stroke="var(--colorBaseGray070)" />
               <YAxis yAxisId='left' stroke="var(--colorBaseGray070)" />
               <Tooltip content={<TooltipContent />} />
@@ -136,7 +137,7 @@ const ChartComparsion = (props) => {
     );
   }
   return (
-    <div className={styles.chartLoading}>Fetching Data from IEX ...</div>
+    <Loading/>
   );
 };
 

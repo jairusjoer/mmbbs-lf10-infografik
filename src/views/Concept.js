@@ -1,17 +1,15 @@
 import { createUseStyles } from 'react-jss'
-import Navigation from "../components/Navigation";
 import Chapter from "../components/Chapter";
 import Section from "../components/Section";
 import ConceptCharts from '../components/concept/ConceptCharts';
 import ConceptColors from '../components/concept/ConceptColors';
 import ConceptFonts from '../components/concept/ConceptFonts';
 import ConceptLibs from '../components/concept/ConceptLibs';
-import Footer from '../components/Footer';
 /* Styles */
 const useStyles = createUseStyles({
   concept: {
     display: 'grid',
-    gridTemplateColumns: 'auto [content] minmax(272px, 720px) auto',
+    gridTemplateColumns: 'auto [content] minmax(288px, 720px) auto',
     gridGap: '48px 16px',
     padding: '48px 0'
   },
@@ -21,7 +19,6 @@ function Concept() {
   const styles = useStyles();
   return (
     <div className="concept">
-      <Navigation />
       <main className={styles.concept}>
         <Chapter title="Konzept">
           <Section title="Ziel">
@@ -79,7 +76,6 @@ function Concept() {
           </Section>
         </Chapter>
       </main>
-      <Footer/>
     </div>
   );
 }

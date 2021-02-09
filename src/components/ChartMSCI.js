@@ -1,6 +1,7 @@
 import { createUseStyles } from 'react-jss'
 import { useState, useEffect } from 'react';
 import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip, ReferenceLine } from 'recharts';
+import Loading from './Loading';
 /* Styles */
 const useStyles = createUseStyles({
   tooltip: {
@@ -124,7 +125,7 @@ const ChartMSCI = (props) => {
     );
   }
   return (
-    <div className={styles.chartLoading}>Fetching Data from IEX ...</div>
+    <Loading/>
   );
 };
 
